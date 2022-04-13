@@ -77,13 +77,26 @@ header button{
     align-items: center;
 }
 
-.main .content .titre_page h1{
+.main a{
+    text-decoration: none;
+    color:#fff
+}
+.main .content .titre_les_enigmes h1{
     font-size: 50px;
     padding: 80px;
     color: #fff;
     background: url('Img/Loupe_enigmes.jpg');
-    background-size: 800px 500px;
+    background-size: 800px 450px;
     background-position: left 0 bottom 75% ;
+}
+
+.main .content .titre_les_neufs_caches h1{
+    font-size: 50px;
+    padding: 80px;
+    color: #fff;
+    background: url('Img/oeufs_neufs_caches5.jpg');
+    background-size: 900px 450px;
+    background-position: left 20% bottom 25% ;
     
 }
 
