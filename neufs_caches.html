@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Les neufs cachés</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,18 +32,36 @@
             </div>
             <div class="card_sans_image">
                 <div class="left">
-                    <h1>Les neufs cachés</h1>
+                    <h1>L'énigme des neufs cachés se présente sous la forme d'un tableau dans lequel on devra colorer les cases contenant un neuf pour découvrir un mot. on entrera en général un indice pour trouver la position de la prochaine énigme.</h1>
                 </div>
             </div>
             <div class="card_sans_image">
                 <div class="left">
-                    <h1>Le code César</h1>
+                    <h1>
+                        <form action="neufs_caches2.js"></form>
+                        <label for="source"> Mot à coder (moins de 8 caractères et sans caractères spéciaux)</label> 
+                        <input type="text" name="source" id="source" placeholder="Ex: Lit" maxlength="8">
+                        <button onclick="CreaTableau()"> Go</button>
+                    </h1>
+                </div>
+            </div>
+            <div class="card_blanche">
+                <div class="left">
+                    <h2>
+                        Tu ne trouveras jamais où j'ai caché mon <span class="barre"> neuf</span> oeuf !
+                        <table class="table-neufs-caches" id="table-neufs-caches">
+                            <thead></thead>
+                            <tbody></tbody>
+                            <tfoot></tfoot>
+                        </table>
+                        <script src="neufs_caches2.js"></script>
+                    </h2>
                 </div>
             </div>
         </div>
-    </section>      
-    <footer>
-        
+    </section>    
+    
+    <footer>  
         <div class="services">
             <div class="service">
                 <h1>Nos services</h1>

@@ -135,6 +135,16 @@ header button{
     width: 800px;
 }   
 
+.main .content .card_sans_image input{
+    font-size: 20px;
+}
+
+.main .content .card_blanche h2{
+    font-size: 20px;
+    background-color: #fff;
+    color:#000;
+    border: solid #000;
+}
 
 footer{
     margin-top: 40px;
@@ -175,6 +185,9 @@ footer .services .service p{
     max-width: 300px;
 }
 
+.barre{
+    text-decoration:line-through;
+}
 @media screen and (max-width: 680px){
 
     nav .onglets{
