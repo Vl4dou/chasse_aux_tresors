@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Braille Translator</title>
+  <script>
+    function translateToBraille() {
+      // Récupération du texte à traduire
+      var inputText = document.getElementById("inputText").value;
+
+      // Traduction du texte en braille
+      var brailleText = "";
+      for (var i = 0; i < inputText.length; i++) {
+        var brailleChar = translateCharToBraille(inputText[i]);
+        brailleText += brailleChar;
+      }
+
+      // Affichage du texte traduit
+      document.getElementById("brailleText").innerHTML = brailleText;
+    }
+
+    function translateCharToBraille(char) {
+      // Mappage des caractères en braille
+      var brailleMap = {
+        'a': '⠁', 'b': '⠃', 'c': '⠉', 'd': '⠙', 'e': '⠑',
+        'f': '⠋', 'g': '⠛', 'h': '⠓', 'i': '⠊', 'j': '⠚',
+        'k': '⠅', 'l': '⠇', 'm': '⠍', 'n': '⠝', 'o': '⠕',
+        'p': '⠏', 'q': '⠟', 'r': '⠗', 's': '⠎', 't': '⠞',
+        'u': '⠥', 'v': '⠧', 'w': '⠺', 'x': '⠭', 'y': '⠽',
+        'z': '⠵', '0': '⠼⠚', '1': '⠼⠁', '2': '⠼⠃', '3': '⠼⠉',
+        '4': '⠼⠙', '5': '⠼⠑', '6': '⠼⠋', '7': '⠼⠛', '8': '⠼⠓',
+        '9': '⠼⠊'
+      };
+
+      // Retourne la traduction du caractère en braille
+      return brailleMap[char.toLowerCase()];
+    }
+  </script>
+</head>
+<body>
+  <h1>Braille Translator</h1>
+  <label for="inputText">Enter text to translate:</label>
+  <br>
+  <textarea id="inputText"></textarea>
+  <br>
+  <button onclick="translateToBraille()">Translate</button>
+  <br>
+  <label for="brailleText">Braille:</label>
+  <br>
+  <div id="brailleText"></div>
+</body>
+</html>
