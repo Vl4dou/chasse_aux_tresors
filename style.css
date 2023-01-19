@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
+/* Général */
+
+button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 body{
     margin:0;
@@ -11,280 +17,287 @@ body{
     background-color: #f8f8f8;
 }
 
-button:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
+    /* En tête */
+    nav{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 5px solid #6f6f6f;
+    }
 
+    nav h1{
+        color: #717171;
+        font-family: 'Playfair Display', sans-serif;
+        font-size: 30px
+    }
 
-nav{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 5px solid #6f6f6f;
-}
+    nav .onglets{
+        margin-top: 3px;
+        margin-left: 300px;
 
-nav h1{
-    color: #717171;
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 30px
-}
+    }
 
-nav .onglets{
-    margin-top: 3px;
-    margin-left: 300px;
+    nav .onglets a{
+        text-decoration: none;
+        color: #000;
+        margin-right: 10px;
+        border-bottom: 1px solid #000;
+        padding-bottom : 5px;
+    }
 
-}
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url('Img/Coffre_entete_acceuil.jpg');
+        background-size:cover;
+        background-position: left -250px bottom 50% ;
+        padding: 40px;
+        color: #fff;
+    }
+    header h1{
+        font-family: 'Monserrat', sans-serif;
+        font-size: 50px
+    }
 
-nav .onglets a{
-    text-decoration: none;
-    color: #000;
-    margin-right: 10px;
-    border-bottom: 1px solid #000;
-    padding-bottom : 5px;
-}
+    header h4{
+        margin-top: -20px;
+        font-size: 20px;
+        text-align: center;
+        border-bottom: 1px solid #fff ;
+    }
 
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url('Img/Coffre_entete_acceuil.jpg');
-    background-size:cover;
-    background-position: left -250px bottom 50% ;
-    padding: 40px;
-    color: #fff;
-}
+    header button{
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #000;
+        border: none;
+        font-size: 20px;
+        font-family: 'Playfair Display', sans-serif;
+        outline: none;
+    }
 
-header h1{
-    font-family: 'Monserrat', sans-serif;
-    font-size: 50px
-}
-
-header h4{
-    margin-top: -20px;
-    font-size: 20px;
-    text-align: center;
-    border-bottom: 1px solid #fff ;
-}
-
-header button{
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    border: none;
-    font-size: 20px;
-    font-family: 'Playfair Display', sans-serif;
-    outline: none;
-}
-
-.main {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.main .content {
-    width: 70%;
-}
-.main h1{
-    text-decoration: underline;
-    font-size: 30px;
-    size: 100px;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    margin: 10px;
-    margin-top: 25px;
-}
-
-.main h2{
-    text-decoration: underline;
-    font-size: 30px;
-    size: 100px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.856);
-    color: rgb(0, 0, 0);
-    margin: 10px;
-    margin-top: 25px;
-}
-.main a{
-    text-decoration: none;
-    color:#fff
-}
-
-.main .tabulation {
-    margin: 0px;
-    padding-left: 80px;
-
-}
-.main .content .titre_les_enigmes h2{
-    font-size: 50px;
-    padding: 80px;
-    color: #fff;
-    background: url('Img/Loupe_enigmes.jpg');
-    background-size: 800px 450px;
-    background-position: left 0 bottom 75% ;
-}
-
-.main .content .titre_code_Césare h2{
-    font-size: 50px;
-    size: 80px;
-    padding: 80px;
-    color: rgb(0, 0, 0);
-    background: url('Img/Césare.jpeg');
-    background-size: 96%;
-    background-position: left 830% bottom 74%;
-    margin-bottom: 20px;
-    text-decoration: none;
-}
-
-.main .content .text-plus-zone-de-text{
-    display: flex;
-    flex-direction: row;
-}
-
-.main .content .text-plus-zone-de-text p{
-    width: auto;
-}
-
-.main .content .text-plus-zone-de-text textarea, input{
-    margin: 10px;
-    width: 60px;
-    height: 60px;
-    font-size: 25px;
-    flex-grow: 4;
-    /*vertical-align: middle;*/
-}
-
-
-.main .content button{
-    font-weight: bold;
-    font-size: 40px;
-    font-family: 'Montserrat', sans-serif;
-    width: 500px;
-    padding: 0px;
-    margin: 10px;
-    margin-left: 20px;
-    background: url('Img/Encoder.jpg');
-    background-size: 208%;
-    background-position: left 37% bottom 36%;
-    text-align: center;
-    padding-left: 20px;
-    opacity: 0.8;
-}
-
-.main .content button:hover {
-    opacity: 1;
-}
-
-.main p{
-    margin: 10px;
-    font-size: 20px;
-    size: 80px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.856);
-    color: rgb(0, 0, 0);
-}
-
-.main .content .titre_les_neufs_caches h1{
-    width: 700px;
-    font-size: 50px;
-    padding: 80px;
-    color: #fff;
-    background: url('Img/oeufs_neufs_caches5.jpg');
-    background-size: 900px 450px;
-    background-position: left 20% bottom 25% ;
+    /* Coprs */
+    .main {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
     
-}
+    .main .content {
+        width: 70%;
+    }
+    .main h1{
+        text-decoration: underline;
+        font-size: 30px;
+        size: 100px;
+        padding: 20px;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        margin-top: 25px;
+    }
 
-.main .content .card{
-    width: 700px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    margin-bottom:20px ;
-    margin-left:0px;
-    padding-left: 0px;
-}
+    .main h2{
+        font-size: 50px;
+        padding: 80px;
+        size: 80px;
+        text-decoration: none;
+        margin: 10px;
+        margin-top: 25px;
+    }
 
-.main .content .card .left{
-    flex: 30%;
-    padding: 20px;
-    background-color: black ;
-    color: #fff;
-}
+    .main h3{
+        font-size: 40px;
+        padding-left: 10px;
+        size: 80px;
+        text-decoration: none;
+        margin: 10px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
-.main .content .card .right img{
-    flex: 70%;
-    height: 300px;
-    width: 400px;
-    margin-top: 5px;
-}
 
-.main .content .card_sans_image{
-    display:flex;
-    flex-wrap:wrap;
-    margin:10px ;
-    padding: 0px;
-    background-color: black ;
-    color: #fff;
-}   
+    .main a{
+        text-decoration: none;
+        color:#fff
+    }
+    
+    .main .tabulation {
+        margin: 0px;
+        padding-left: 80px;
+    
+    }
+    
+    .main .content .text-plus-zone-de-text{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .main .content .text-plus-zone-de-text p{
+        width: auto;
+    }
+    
+    .main .content .text-plus-zone-de-text textarea, input{
+        margin: 10px;
+        width: 60px;
+        height: 50px;
+        font-size: 25px;
+        flex-grow: 4;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        /*vertical-align: middle;*/
+    }
+    
+    .main .content button{
+        font-weight: bold;
+        font-size: 40px;
+        font-family: 'Montserrat', sans-serif;
+        width: 500px;
+        padding: 0px;
+        margin: 10px;
+        margin-left: 20px;
+        background: url('Img/Encoder.jpg');
+        background-size: 208%;
+        background-position: left 37% bottom 36%;
+        text-align: center;
+        padding-left: 20px;
+        opacity: 0.8;
+    }
+    
+    .main .content button:hover {
+        opacity: 1;
+        background-size: 170%;
+    }
+    
+    .main p{
+        margin: 10px;
+        font-size: 20px;
+        size: 80px;
+        padding: 20px;
+        background-color: rgba(235, 235, 235, 0.4);
+        background-color: #f8f8f8;
+        color: rgb(0, 0, 0);
+    }
 
-.main .content .card_sans_image input{
-    font-size: 20px;
-}
+    .main .description, .encodage, .astuces {
+        background-color: rgba(255, 255, 255);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 10px;
+        margin-top: 0px;
+    }
 
-.main .content .card_blanche h2{
-    font-size: 20px;
-    background-color: #fff;
-    color:#000;
-    border: solid #000;
-}
+        /* Index */
+        .main .content .card{
+            width: 700px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            margin-bottom:20px ;
+            margin-left:0px;
+            padding-left: 0px;
+        }
+        
+        .main .content .card .left{
+            flex: 30%;
+            padding: 20px;
+            background-color: black ;
+            color: #fff;
+        }
+        
+        .main .content .card .right img{
+            flex: 70%;
+            height: 300px;
+            width: 400px;
+            margin-top: 5px;
+        }
+        
+        .main .content .card_sans_image{
+            display:flex;
+            flex-wrap:wrap;
+            margin:10px ;
+            padding: 0px;
+            background-color: black ;
+            color: #fff;
+        }   
+        
+        .main .content .card_sans_image input{
+            font-size: 20px;
+        }
 
-footer{
-    margin-top: 40px;
-    border-top: 5px solid #6f6f6f;
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    padding:30px 100px;
-}
+        /* Les Enigmes */
+        .main .content .titre_les_enigmes h2{
+            color: #fff;
+            background: url('Img/Loupe_enigmes.jpg');
+            background-size: 800px 450px;
+            background-position: left 0 bottom 75% ;
+        }
+        
+        /* Le code César */
+        .main .content .titre_code_Césare h2{
+            color: rgb(0, 0, 0);
+            background: url('Img/Césare.jpeg');
+            background-size: 96%;
+            background-position: left 830% bottom 74%;
+        }
 
-footer h1{
-    display: flex;
-    width:200px;
-    font-family: 'Playfair Display', sans-serif;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 5px;
-}
+        /* Les neufs cachés */
+        .main .content .titre_les_neufs_caches h1{
+            width: 700px;
+            font-size: 50px;
+            padding: 80px;
+            color: #fff;
+            background: url('Img/oeufs_neufs_caches5.jpg');
+            background-size: 900px 450px;
+            background-position: left 20% bottom 25% ;
+            
+        }
 
-footer h2{
-    display: flex;
-    font-family: 'Playfair Display', sans-serif;
-    color: #000;
-    padding-bottom: 5px;
-}
+    /* Pied de page */
+    footer{
+        margin-top: 40px;
+        border-top: 5px solid #6f6f6f;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        padding:30px 100px;
+    }
+    
+    footer h1{
+        display: flex;
+        width:200px;
+        font-family: 'Playfair Display', sans-serif;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+    }
+    
+    footer h2{
+        display: flex;
+        font-family: 'Playfair Display', sans-serif;
+        color: #000;
+        padding-bottom: 5px;
+    }
+    
+    footer .services{
+        justify-content: center;
+        margin-top: -10px;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    
+    footer .services .service{
+        margin-right: 30px;
+        padding: 10px;
+    }
+    
+    footer .services .service p{
+        max-width: 300px;
+    }
 
-footer .services{
-    justify-content: center;
-    margin-top: -10px;
-    display:flex;
-    flex-wrap:wrap;
-}
 
-footer .services .service{
-    margin-right: 30px;
-    padding: 10px;
-}
-
-footer .services .service p{
-    max-width: 300px;
-}
-
-.barre{
-    text-decoration:line-through;
-}
+/* Responsive */
 @media screen and (max-width: 680px){
 
     nav .onglets{
@@ -293,4 +306,22 @@ footer .services .service p{
     }
 }
 
+/*
+
+.main .content .card_blanche h2{
+    font-size: 20px;
+    background-color: #fff;
+    color:#000;
+    border: solid #000;
+}
+
+
+
+
+
+.barre{
+    text-decoration:line-through;
+}
+
+*/
 

@@ -30,10 +30,8 @@
             <div class="titre_code_Césare">
                 <h2>Le code César</h2>
             </div>
-
-            <h2>Description</h2>
-
-            <div class="Description">
+            <div class="description">
+                <h3>Description</h3>
                 <p>Le code César est une méthode de chiffrement très simple utilisée par Jules César dans ses correspondances secrètes. Le texte chiffré s'obtient en remplaçant chaque lettre du texte clair original par une lettre à distance fixe, toujours du même côté, dans l'ordre de l'alphabet. Pour les dernières lettres (dans le cas d'un décalage à droite), on reprend au début. Par exemple avec un décalage de 3 vers la droite, A est remplacé par D, B devient E, et ainsi jusqu'à W qui devient Z, puis X devient A etc.</p>
             </div>
                         
@@ -56,27 +54,27 @@
                 }
             </script>
 
-            <h2>Aide à l'encodage</h2>
-
-            <div class="text-plus-zone-de-text">
-                <label for="input"><p>Message à encoder :</p></label>
-                <textarea id="input"></textarea>
+            <div class="encodage">
+                <h3>Aide à l'encodage</h3>
+                <div class="text-plus-zone-de-text">
+                    <label for="input"><p>Message à encoder :</p></label>
+                    <textarea id="input"></textarea>
+                </div>
+                <div class="text-plus-zone-de-text">
+                    <label for="shift"> <p>chiffre de César (Décalage) :</p></label>
+                    <input type="number" id="shift">
+                    <button onclick="encode()">Encoder</button>
+                </div>
+            
+                <br>
+                <div class="text-plus-zone-de-text">
+                    <label for="output"><p>Message encodé :</p></label>
+                    <textarea id="output" readonly></textarea>
+                </div>
             </div>
-            <div class="text-plus-zone-de-text">
-                <label for="shift"> <p>chiffre de César (Décalage) :</p></label>
-                <input type="number" id="shift">
-                <button onclick="encode()">Encoder</button>
-            </div>
-           
-            <br>
-            <div class="text-plus-zone-de-text">
-                <label for="output"><p>Message encodé :</p></label>
-                <textarea id="output" readonly></textarea>
-            </div>
 
-            <h2>Astuces</h2>
-
-            <div class="Description">
+            <div class="astuces">
+                <h3>Astuces</h3>
                 <p>On peut décider ou non de fournir la clé de décriptage en fonction de la difficulté que l'on veut donner à notre énigme:</p>
                 <p><span class="tabulation">Si le message est assez long, quelqu'un d'attentif pourra repérer des enchainement connus (une lettre seule est un A ou un Y, la lettre la plus présente est souvent un E, etc) sans qu'on lui donne le chiffre de César.</span></p>
                 <p><span class="tabulation">Si vous choisissez de donner le décallage, vous pouvez le faire de façon brut, ou bien déguisé en donnant par exemple le mot "Arranger" pour A rend G.</span></p>
