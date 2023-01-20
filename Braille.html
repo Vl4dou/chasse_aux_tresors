@@ -1,50 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <title>Braille Translator</title>
-  <script>
-    function translateToBraille() {
-      // Récupération du texte à traduire
-      var inputText = document.getElementById("inputText").value;
-
-      // Traduction du texte en braille
-      var brailleText = "";
-      for (var i = 0; i < inputText.length; i++) {
-        var brailleChar = translateCharToBraille(inputText[i]);
-        brailleText += brailleChar;
-      }
-
-      // Affichage du texte traduit
-      document.getElementById("brailleText").innerHTML = brailleText;
-    }
-
-    function translateCharToBraille(char) {
-      // Mappage des caractères en braille
-      var brailleMap = {
-        'a': '⠁', 'b': '⠃', 'c': '⠉', 'd': '⠙', 'e': '⠑',
-        'f': '⠋', 'g': '⠛', 'h': '⠓', 'i': '⠊', 'j': '⠚',
-        'k': '⠅', 'l': '⠇', 'm': '⠍', 'n': '⠝', 'o': '⠕',
-        'p': '⠏', 'q': '⠟', 'r': '⠗', 's': '⠎', 't': '⠞',
-        'u': '⠥', 'v': '⠧', 'w': '⠺', 'x': '⠭', 'y': '⠽',
-        'z': '⠵', '0': '⠼⠚', '1': '⠼⠁', '2': '⠼⠃', '3': '⠼⠉',
-        '4': '⠼⠙', '5': '⠼⠑', '6': '⠼⠋', '7': '⠼⠛', '8': '⠼⠓',
-        '9': '⠼⠊'
-      };
-
-      // Retourne la traduction du caractère en braille
-      return brailleMap[char.toLowerCase()];
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le code César</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Braille Translator</h1>
-  <label for="inputText">Enter text to translate:</label>
-  <br>
-  <textarea id="inputText"></textarea>
-  <br>
-  <button onclick="translateToBraille()">Translate</button>
-  <br>
-  <label for="brailleText">Braille:</label>
-  <br>
-  <div id="brailleText"></div>
+    <nav>
+        <h1> Ma propre chasse au trésor </h1>
+        <div class="onglets">
+            <a href="index.html"> Acceuil</a>
+            <a href="Les_enigmes.html"> Les Enigmes</a>
+            <a href=""> Votre chasse</a>
+            <a href=""> Contacts</a>
+        </div>
+    </nav>  
+    
+    <header>
+        <h1>MAYOOW</h1>
+        <h4> Ma propre chasse au trésor </h4>
+        <button>Parcourir</button>
+    </header>
+
+    <section class="main" id="enigms">
+        <div class="content">
+            <div class="titre_braille">
+                <h2>Le Braille</h2>
+            </div>
+            <div class="description">
+              <h3>Description</h3>
+              <p>Le braille est un système d’écriture tactile à points saillants, à l’usage des personnes aveugles ou fortement malvoyantes. Le système porte le nom de son inventeur, le Français Louis Braille </p>
+          </div>
+          <div class="encodage">
+            <h3>Aide à l'encodage</h3>
+            <div class="text-plus-zone-de-text">
+              <label for="inputText"><p>Message à encoder:</p></label>
+              <textarea id="inputText"></textarea>
+              <button onclick="translateToBraille()">Encoder</button>
+            </div>
+            <div class="text-plus-zone-de-text">
+              <label for="brailleText"><p>Message codé:</p></label>
+              <div id="brailleText"></div>
+            </div>
+          </div>
+          <div class="astuces">
+            <h3>Astuces</h3>
+            <p>Vous devrez fournir l'alphabet braille pour décripter le code:</p>
+            <img src="Img\alphabet_braille.jpg"> </img>
+        </div>
 </body>
+
+<script src="braille.js"></script>
+
 </html>
